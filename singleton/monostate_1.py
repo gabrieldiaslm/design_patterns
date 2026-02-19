@@ -7,7 +7,7 @@ class StringReprMixin:
         )
         return f'{self.__class__.__name__}({params})'
     
-    def __rpr__(self):
+    def __repr__(self):
         return self.__str__()
     
 class MonoStateSimple(StringReprMixin):
