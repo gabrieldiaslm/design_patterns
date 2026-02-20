@@ -71,4 +71,5 @@ if __name__ == "__main__":
     user_builder = UserBuilder()
     user_director = UserDirector(user_builder)
     user1 = user_director.with_age('Ga', 'Dias', 22)
+    print(user1.firstname, user1.lastname)
     print(user1)
