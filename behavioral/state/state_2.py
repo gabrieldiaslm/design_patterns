@@ -55,7 +55,12 @@ if __name__ == "__main__":
     sound.press_next()
     sound.press_prev()
     sound.press_prev()
-
     print()
     sound.change_mode(MusicMode(sound))
+    sound.press_next()
+    sound.press_next()
+    sound.press_prev()
+    sound.press_prev()
+
+
 
