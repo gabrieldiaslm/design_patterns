@@ -34,9 +34,11 @@ class PlayMode(ABC):
 
 
 class RadioMode(PlayMode):
-    def press_next(self) -> None: pass
+    def press_next(self) -> None:
+        self.sound.playing += 1000
 
-    def press_prev(self) -> None: pass
+    def press_prev(self) -> None:
+        self.sound.playing -= 1000 if self.sound.playing > 0 else 0
 
 class MusicMode(PlayMode):
     def press_next(self) -> None: 
@@ -51,4 +53,9 @@ if __name__ == "__main__":
     sound.press_next()
     sound.press_next()
     sound.press_next()
+    sound.press_prev()
+    sound.press_prev()
+
+    print()
+    sound.change_mode(MusicMode(sound))
 
